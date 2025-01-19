@@ -1,0 +1,71 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to right, #f0e4f0, #e4f0f0);
+  border-radius: 10px;
+}
+
+.homeleft {
+  flex: 3; /* Take more space */
+  margin-right: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.homeright {
+  flex: 1; /* Sidebar for users */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.homeUser {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.507);
+  transition: all 0.5s;
+}
+.homeUser > img {
+  height: 3vmax;
+  width: 3vmax;
+  margin: 1vmax;
+  border-radius: 100%;
+  border: 3px solid rgb(255, 201, 201);
+}
+
+.homeUser:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .homeleft {
+    padding: 0;
+    min-height: 90vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .homeleft {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+h6 {
+  color: #555; /* Subtle color for headings */
+  text-align: center; /* Center align headings */
+}

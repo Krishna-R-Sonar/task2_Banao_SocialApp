@@ -1,0 +1,107 @@
+.post {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.post:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postDetails {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.postDetails img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.commentForm {
+  display: flex;
+  margin-top: 10px;
+}
+
+.commentForm input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.commentForm button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.commentForm button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.postHeader > button {
+  border-radius: 100%;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.post > img {
+  width: 100%;
+}
+
+.postDetails > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 1vmax;
+}
+
+.postFooter > button {
+  color: rgba(0, 0, 0, 0.767);
+  margin: 0 1vmax;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.postFooter > button:hover {
+  transform: translateY(-4px);
+}
+
+.postFooter > button > svg {
+  font-size: 1.7vmax;
+}
+
+.DialogBox {
+  min-width: 500px;
+  height: 100vh;
+  padding: 2vmax;
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+    padding: 0 0 4vw;
+    margin: 0;
+  }
+
+  .postFooter > button > svg {
+    font-size: 8vw;
+  }
+}
